@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterDefault.Master.cs" Inherits="JobPortal.Default" %>
+<%@ Register TagName="Myhead" TagPrefix="uh1" Src="~/Content/Header.ascx" %>
+<%@ Register TagName="Myfoot" TagPrefix="uf1" Src="~/Content/Footer.ascx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="Scripts/jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="Scripts/menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table>
+            <tr>
+                <td>
+                    <uh1:Myhead ID="head1" runat="server" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="menu">
+		<ul class="menu">
+			<%--<li><a href="JobseekerForm.aspx" class="parent"><span>Jobseeker Form</span></a>--%>
+		</ul>		
+	</div>
+                </td>
+            </tr>
+            <tr>
+                <td><center>
+					<div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                     </div>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <uf1:Myfoot ID="foot1" runat="server" />
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
